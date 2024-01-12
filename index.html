@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AKANSHA-SAXENA Personal portfolio website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@200;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* Used typed js*/
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(0, 0, 0);
+        color: white;
+
+        font-family: "Poppins", sans-serif;
+      }
+
+      nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        /* height: 70px;*/
+        background-color: blueviolet;
+        padding: 0 18px;
+        position: fixed;
+        margin-bottom: 3rem;
+        top: 0;
+        overflow: hidden;
+        z-index: 10;
+        /*  flex-wrap: wrap;*/
+      }
+      .left {
+        font-size: 1.5rem;
+        color: white;
+        margin-left: 4.5rem;
+        width: 30%;
+      }
+      .topnav {
+        width: 35%;
+        float: right;
+        align-items: center;
+      }
+
+      .topnav a {
+        float: left;
+        color: white;
+        text-align: center;
+        padding: 10px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      .topnav a:hover {
+        background-color: #d9c3ed;
+        color: black;
+      }
+      .topnav-right {
+        float: right;
+      }
+      .topnav a.active {
+        background-color: #d9c3ed;
+        color: black;
+      }
+
+      .topnav .icon {
+        display: none;
+      }
+
+      .left {
+        font-size: 1.5rem;
+      }
+
+      .firstSection {
+        display: flex;
+        max-width: 75vw;
+        justify-content: space-around;
+        align-items: center;
+        margin: 5rem auto;
+        flex-wrap: wrap;
+      }
+      .firstSection > div {
+        width: 34%;
+      }
+      .leftSection {
+        /*background-color: red;*/
+        margin: 30px 0;
+        padding-left: 7px;
+        font-size: 1.5rem;
+        flex-basis: 55%;
+      }
+      .rightSection {
+        padding: auto;
+        pointer-events: none;
+        flex-basis: 30%;
+      }
+      .rightSection img {
+        width: 100%;
+      }
+      .purple {
+        color: blueviolet;
+      }
+      #element {
+        color: blueviolet;
+      }
+      main hr {
+        border: 0;
+        margin-top: 0;
+        background: blueviolet;
+        height: 0.8px;
+        margin: 40px 85px;
+      }
+      .secondSection {
+        max-width: 75vw;
+        margin: auto;
+      }
+      .secondSection h1 {
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+      .text-gray {
+        color: gray;
+      }
+      /*---------------------about me-------------------*/
+      .aboutme {
+        max-width: 75vw;
+        margin: auto;
+        margin-bottom: 80px;
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .aboutme h1 {
+        font-size: 1.9rem;
+        font-weight: 400;
+      }
+      .about-col-1 {
+        flex-basis: 35%;
+      }
+      .about-col-2 {
+        flex-basis: 55%;
+      }
+      .thinner {
+        font-weight: 300;
+      }
+      .aboutme .container .row .about-col-1 img {
+        width: 100%;
+        border-radius: 15px;
+      }
+      .tab-titles {
+        display: flex;
+        margin: 20px 0 40px;
+      }
+      .tab-links {
+        margin-right: 60px;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+      }
+      .tab-links::after {
+        content: "";
+        width: 0;
+        height: 3px;
+        background: blueviolet;
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        transition: 0.5s;
+      }
+      .tab-links.active-link::after {
+        width: 50%;
+      }
+
+      .tab-contents ul li {
+        list-style: none;
+        margin: 10px 0;
+      }
+      .tab-contents ul li span {
+        font-size: 14px;
+        color: blueviolet;
+      }
+      .tab-contents {
+        display: none;
+      }
+      .tab-contents.active-tab {
+        display: block;
+      }
+      /*------------------timeline-----------------------*/
+      .secondSection {
+        margin-bottom: 140px;
+      }
+      .secondSection .abc {
+        font-size: 1.3rem;
+        font-weight: 200;
+        color: gray;
+        text-align: center;
+        display: block;
+      }
+      .timeline {
+        display: block;
+        width: 80%;
+        margin: 1px auto;
+      }
+
+      .timeline .heading {
+        margin-bottom: 150px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      .card {
+        width: 45%;
+        padding: 30px;
+        border-radius: 10px;
+        color: #fff;
+        display: block;
+        margin: -80px 0;
+        position: relative;
+        background: rgb(38, 0, 255);
+      }
+
+      .card:nth-child(even) {
+        margin-left: auto;
+      }
+
+      .card:nth-child(even):before {
+        content: "";
+        position: absolute;
+        left: -15%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border: 5px solid #191919;
+        border-radius: 50%;
+      }
+
+      .card:nth-child(even):after {
+        content: "";
+        position: absolute;
+        left: -8.5%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 7%;
+        height: 2px;
+        background: #fff;
+        z-index: -1;
+      }
+
+      .card:nth-child(odd):before {
+        content: "";
+        position: absolute;
+        right: -13%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border: 5px solid #191919;
+        border-radius: 50%;
+      }
+
+      .card:nth-child(odd):after {
+        content: "";
+        position: absolute;
+        right: -8.5%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 7%;
+        height: 2px;
+        background: #fff;
+        z-index: -1;
+      }
+
+      .card:nth-child(2),
+      .card:nth-child(2):before {
+        /*  background: rgb(136, 21, 190);*/
+        background: blueviolet;
+      }
+      .card:nth-child(3),
+      .card:nth-child(3):before {
+        background: blueviolet;
+      }
+      .card:nth-child(4),
+      .card:nth-child(4):before {
+        background: rgb(226, 131, 43);
+      }
+      .card:nth-child(5),
+      .card:nth-child(5):before {
+        background: blueviolet;
+      }
+      .card:nth-child(6),
+      .card:nth-child(6):before {
+        background: blueviolet;
+      }
+
+      .card:nth-child(even) .card-body:before {
+        content: "";
+        position: absolute;
+        left: -12%;
+        top: 0;
+        width: 0px;
+        height: 100%;
+        border: 1px dashed #fff;
+        z-index: -1;
+      }
+
+      .card-title {
+        font-size: 30px;
+        font-weight: 300;
+        margin-bottom: 20px;
+      }
+      /*--------------------------card for certification------------------------*/
+
+      /*-------------------contact--------------------------------------------------*/
+      .contact-left {
+        flex-basis: 35%;
+      }
+      .contact-right {
+        flex-basis: 60%;
+      }
+      .contact-left p {
+        margin-top: 30px;
+      }
+      .contactus .container {
+        max-width: 75vw;
+        margin: auto;
+      }
+      .contact-left p i {
+        color: blueviolet;
+        margin-right: 15px;
+        font-size: 25px;
+      }
+      .social-icons {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      .sub-title {
+        margin-bottom: 30px;
+        width: 100vw;
+      }
+      .social-icons a {
+        text-decoration: none;
+        font-size: 30px;
+        margin-right: 15px;
+        color: #ababab;
+        display: inline-block;
+        transition: transform 0.5s;
+      }
+      .social-icons a:hover {
+        color: blueviolet;
+        transform: translateY(-5px);
+      }
+      .btn.btn2 {
+        display: inline-block;
+        background: blueviolet;
+      }
+      .contact-right form {
+        width: 100%;
+      }
+      .btn {
+        background-color: blueviolet;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+      form input,
+      form textarea {
+        width: 100%;
+        border: 0;
+        outline: none;
+        background: #262626;
+        padding: 15px;
+        margin: 15px 0;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 6px;
+      }
+      form btn2 {
+        padding: 14px 60px;
+        font-size: 18px;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+      .copyright {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: 25px 0;
+        background: #262626;
+        font-weight: 300;
+        margin-top: 65px;
+      }
+      .copyright i {
+        color: red;
+      }
+      /*----------------------CSS for small screen------------------------------>*/
+      @media only screen and (max-width: 700px) {
+        .firstSection {
+          flex-direction: column;
+        }
+        .firstSection > div {
+          width: 100%;
+        }
+        .leftSection,
+        .rightSection {
+          flex-basis: 100%;
+        }
+        .row {
+          flex-direction: column;
+        }
+        .about-col-1,
+        .about-col-2 {
+          flex-basis: 100%;
+        }
+        .about-col-1 {
+          padding: 2%;
+          margin-bottom: 10rem;
+        }
+        .card:before {
+          content: "";
+          position: absolute;
+          right: -13%;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 20px;
+          height: 20px;
+          border: 5px solid #191919;
+          border-radius: 50%;
+        }
+
+        .card:after {
+          content: "";
+          position: absolute;
+          right: -8.5%;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 7%;
+          height: 2px;
+          background: #fff;
+          z-index: -1;
+        }
+        .card {
+          width: 100%;
+          padding: 30px;
+
+          border-radius: 10px;
+          color: #fff;
+          display: block;
+          margin-top: 1.5rem;
+          margin-bottom: 1.5rem;
+          position: relative;
+          background: rgb(38, 0, 255);
+        }
+        .copyright {
+          width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 700px) {
+        .rightSection img {
+          width: 100%;
+        }
+        
+        .timeline .heading {
+          margin-bottom: 60px;
+        }
+        
+        .left {
+          font-size: 1rem;
+        }
+      }
+
+      @media screen and (max-width: 1300px) {
+        .topnav a {
+          display: none;
+        }
+        .topnav a.icon {
+          float: right;
+          display: block;
+        }
+        .topnav.responsive {
+          position: relative;
+        }
+        .topnav.responsive .icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .topnav.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav">
+        <div class="left">Akansha Saxena</div>
+        <div class="topnav" id="myTopnav">
+          <div class="topnav-right">
+            <a href="#home">Home</a>
+            <a href="#about_me">About ME</a>
+            <a href="#project">Projects</a>
+            <a href="#contact_me">Contact Me</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div id="home">
+        <section class="firstSection">
+          <div class="leftSection">
+            Hi, My name is
+            <span class="purple">Akansha Saxena</span>
+
+            <div>and I am a passionate</div>
+
+            <span id="element"></span>
+          </div>
+          <div class="rightSection">
+            <img
+              src="images/AkanshaSaxena-removebg-preview (1).png"
+              alt="my image"
+            />
+          </div>
+        </section>
+      </div>
+
+      <!-------------------------about me--------------->
+      <div id="about_me">
+        <section class="aboutme">
+          <div class="container">
+            <div class="row">
+              <div class="about-col-1">
+                <img src="images/IMG-20231107-WA0520.jpg" alt="" />
+              </div>
+              <div class="about-col-2">
+                <h1>About Me</h1>
+                <span class="text-gray">Learner & Observer</span>
+                <p class="thinner">
+                  A highly motivated student with a strong passion for
+                  technology and a diverse range of technological skills.
+                  Throughout my journey, I have developed proficiency in various
+                  programming languages and core subjects, enabling me to take
+                  on a wide variety of projects. I thrive on continuous learning
+                  and adaptability, recognizing the importance of staying
+                  up-to-date in the ever-evolving field of technology. With my
+                  dedication to personal and professional growth, I am confident
+                  that my passion for learning and my versatile skill set will
+                  make me a valuable asset in any technology-driven endeavor.
+                </p>
+
+                <div class="tab-titles">
+                  <p class="tab-links active-link" onclick="opentab('skills')">
+                    Skills
+                  </p>
+                  <p class="tab-links" onclick="opentab('experience')">
+                    Experience
+                  </p>
+                  <p class="tab-links" onclick="opentab('education')">
+                    Educations
+                  </p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                  <ul>
+                    <li>
+                      <span>Programming languages</span><br />Java, C, C#.Net,
+                      Python
+                    </li>
+                    <li><span>Database</span><br />SQL & DBMS</li>
+                    <li><span>Web Development</span><br />HTML,CSS,JS</li>
+                  </ul>
+                </div>
+
+                <div class="tab-contents" id="experience">
+                  <ul>
+                    <li>
+                      <span>May 2023 - current</span><br />GFG-BV Technical team
+                      member
+                    </li>
+                    <li>
+                      <span>Jan 2024 - current</span><br />Intern at CRIS(Centre
+                      for Railway Information Systems)
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                  <ul>
+                    <li>
+                      <span>2022-2024 (8.85 CGPA)</span><br />MCA at Banasthali
+                      Vidyapith
+                    </li>
+                    <li>
+                      <span>2019-2022 (9.35 CGPA)</span><br />BCA at Banasthali
+                      Vidyapith
+                    </li>
+                    <li><span>2003-2019</span><br />Hartmann College</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-------------------------second section--------------->
+
+      <div id="project">
+        <section class="secondSection">
+          <h3 class="abc">What I have done so far</h3>
+          <div class="timeline">
+            <h1 class="heading">Projects</h1>
+
+            <div class="card">
+              <div class="card-body">
+                <h1 class="card-title">ShopBuddy</h1>
+                <h3>Jan 2022 - May 2022</h3>
+                <p class="card-detail">
+                  Implemented user login where customer can login/signup into
+                  the application and can avail the benefits of an online
+                  shopping store
+                  <span class="bold-text"
+                    >Tech-stacks involved: HTML, CSS, JavaScript, PHP.</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h1 class="card-title">EasyHousings</h1>
+                <h3>Feb 2023 - April 2023</h3>
+                <p class="card-detail">
+                  Implemented a web application which enables the user to rent
+                  and lease the properties. Tech-stacks involved: JavaScript,
+                  C#.net, HTML, CSS, Xml
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-----------------contact-------------------------->
+      <div id="contact_me">
+        <section class="contactus">
+          <div class="container">
+            <div class="row">
+              <h1 class="sub-title">Contact Me</h1>
+              <div class="contact-left">
+                <p>
+                  <i class="fa-solid fa-paper-plane"></i
+                  >saxenaakanshaa@gmail.com
+                </p>
+                <p><i class="fa-solid fa-phone-volume"></i>8445186622</p>
+                <div class="social-icons">
+                  <a
+                    href="https://www.linkedin.com/in/akansha-saxena-53174a220/"
+                    ><i class="fa-brands fa-linkedin"></i
+                  ></a>
+                  <a href="https://github.com/itsAkanshaSaxena"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                  <a href="https://www.instagram.com"
+                    ><i class="fa-brands fa-square-instagram"></i
+                  ></a>
+                </div>
+                <a
+                  href="images/2243037_Akansha Saxena.pdf"
+                  download
+                  class="btn btn2"
+                  >Download CV</a
+                >
+              </div>
+              <div class="contact-right">
+                <form>
+                  <input
+                    type="text"
+                    name="Name"
+                    placeholder="Your Name"
+                    required
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                  />
+                  <textarea
+                    name="Message"
+                    rows="6"
+                    placeholder="Your Message"
+                  ></textarea>
+                  <button type="submit" class="btn btn2">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="copyright">
+            <p>
+              Copyright @ Akansha. 'Made with
+              <i class="fa-solid fa-heart"></i> by Akansha Saxena
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+      var typed = new Typed("#element", {
+        strings: [
+          "Web developer ",
+          " Web designer",
+          "Problem Solver",
+          "Änalytical Thinker",
+          "Strategic Thinker",
+          "coder",
+          "aspiring Software Engineer",
+        ],
+        typeSpeed: 50,
+        loop: true,
+      });
+
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+  </body>
+</html>
