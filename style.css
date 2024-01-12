@@ -1,0 +1,499 @@
+/* Used typed js*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(0, 0, 0);
+  color: white;
+
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  /* height: 70px;*/
+  background-color: blueviolet;
+  padding: 0 18px;
+  position: fixed;
+  margin-bottom: 3rem;
+  top: 0;
+  overflow: hidden;
+  z-index: 10;
+  /*  flex-wrap: wrap;*/
+}
+.left {
+  font-size: 1.5rem;
+  color: white;
+  margin-left: 4.5rem;
+  width: 30%;
+}
+.topnav {
+  width: 35%;
+  float: right;
+  align-items: center;
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #d9c3ed;
+  color: black;
+}
+.topnav-right {
+  float: right;
+}
+.topnav a.active {
+  background-color: #d9c3ed;
+  color: black;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.left {
+  font-size: 1.5rem;
+}
+
+.firstSection {
+  display: flex;
+  max-width: 75vw;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5rem auto;
+  flex-wrap: wrap;
+}
+.firstSection > div {
+  width: 34%;
+}
+.leftSection {
+  /*background-color: red;*/
+  margin: 30px 0;
+  padding-left: 7px;
+  font-size: 1.5rem;
+  flex-basis: 55%;
+}
+.rightSection {
+  padding: auto;
+  pointer-events: none;
+  flex-basis: 30%;
+}
+.rightSection img {
+  width: 100%;
+}
+.purple {
+  color: blueviolet;
+}
+#element {
+  color: blueviolet;
+}
+main hr {
+  border: 0;
+  margin-top: 0;
+  background: blueviolet;
+  height: 0.8px;
+  margin: 40px 85px;
+}
+.secondSection {
+  max-width: 75vw;
+  margin: auto;
+}
+.secondSection h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.text-gray {
+  color: gray;
+}
+/*---------------------about me-------------------*/
+.aboutme {
+  max-width: 75vw;
+  margin: auto;
+  margin-bottom: 80px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.aboutme h1 {
+  font-size: 1.9rem;
+  font-weight: 400;
+}
+.about-col-1 {
+  flex-basis: 35%;
+}
+.about-col-2 {
+  flex-basis: 55%;
+}
+.thinner {
+  font-weight: 300;
+}
+.aboutme .container .row .about-col-1 img {
+  width: 100%;
+  border-radius: 15px;
+}
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+.tab-links {
+  margin-right: 60px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+.tab-links::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: blueviolet;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after {
+  width: 50%;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+.tab-contents ul li span {
+  font-size: 14px;
+  color: blueviolet;
+}
+.tab-contents {
+  display: none;
+}
+.tab-contents.active-tab {
+  display: block;
+}
+/*------------------timeline-----------------------*/
+.secondSection {
+  margin-bottom: 140px;
+}
+.secondSection .abc {
+  font-size: 1.3rem;
+  font-weight: 200;
+  color: gray;
+  text-align: center;
+  display: block;
+}
+.timeline {
+  display: block;
+  width: 80%;
+  margin: 1px auto;
+}
+
+.timeline .heading {
+  margin-bottom: 150px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.card {
+  width: 45%;
+  padding: 30px;
+  border-radius: 10px;
+  color: #fff;
+  display: block;
+  margin: -80px 0;
+  position: relative;
+  background: rgb(38, 0, 255);
+}
+
+.card:nth-child(even) {
+  margin-left: auto;
+}
+
+.card:nth-child(even):before {
+  content: "";
+  position: absolute;
+  left: -15%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 5px solid #191919;
+  border-radius: 50%;
+}
+
+.card:nth-child(even):after {
+  content: "";
+  position: absolute;
+  left: -8.5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 7%;
+  height: 2px;
+  background: #fff;
+  z-index: -1;
+}
+
+.card:nth-child(odd):before {
+  content: "";
+  position: absolute;
+  right: -13%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 5px solid #191919;
+  border-radius: 50%;
+}
+
+.card:nth-child(odd):after {
+  content: "";
+  position: absolute;
+  right: -8.5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 7%;
+  height: 2px;
+  background: #fff;
+  z-index: -1;
+}
+
+.card:nth-child(2),
+.card:nth-child(2):before {
+  /*  background: rgb(136, 21, 190);*/
+  background: blueviolet;
+}
+.card:nth-child(3),
+.card:nth-child(3):before {
+  background: blueviolet;
+}
+.card:nth-child(4),
+.card:nth-child(4):before {
+  background: rgb(226, 131, 43);
+}
+.card:nth-child(5),
+.card:nth-child(5):before {
+  background: blueviolet;
+}
+.card:nth-child(6),
+.card:nth-child(6):before {
+  background: blueviolet;
+}
+
+.card:nth-child(even) .card-body:before {
+  content: "";
+  position: absolute;
+  left: -12%;
+  top: 0;
+  width: 0px;
+  height: 100%;
+  border: 1px dashed #fff;
+  z-index: -1;
+}
+
+.card-title {
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+/*--------------------------card for certification------------------------*/
+
+/*-------------------contact--------------------------------------------------*/
+.contact-left {
+  flex-basis: 35%;
+}
+.contact-right {
+  flex-basis: 60%;
+}
+.contact-left p {
+  margin-top: 30px;
+}
+.contactus .container {
+  max-width: 75vw;
+  margin: auto;
+}
+.contact-left p i {
+  color: blueviolet;
+  margin-right: 15px;
+  font-size: 25px;
+}
+.social-icons {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.sub-title {
+  margin-bottom: 30px;
+  width: 100vw;
+}
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+.social-icons a:hover {
+  color: blueviolet;
+  transform: translateY(-5px);
+}
+.btn.btn2 {
+  display: inline-block;
+  background: blueviolet;
+}
+.contact-right form {
+  width: 100%;
+}
+.btn {
+  background-color: blueviolet;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+form btn2 {
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.copyright {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  padding: 25px 0;
+  background: #262626;
+  font-weight: 300;
+  margin-top: 65px;
+}
+.copyright i {
+  color: red;
+}
+/*----------------------CSS for small screen------------------------------>*/
+@media only screen and (max-width: 700px) {
+  .firstSection {
+    flex-direction: column;
+  }
+  .firstSection > div {
+    width: 100%;
+  }
+  .leftSection,
+  .rightSection {
+    flex-basis: 100%;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .about-col-1,
+  .about-col-2 {
+    flex-basis: 100%;
+  }
+  .about-col-1 {
+    padding: 2%;
+    margin-bottom: 10rem;
+  }
+  .card:before {
+    content: "";
+    position: absolute;
+    right: -13%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 5px solid #191919;
+    border-radius: 50%;
+  }
+
+  .card:after {
+    content: "";
+    position: absolute;
+    right: -8.5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7%;
+    height: 2px;
+    background: #fff;
+    z-index: -1;
+  }
+  .card {
+    width: 100%;
+    padding: 30px;
+
+    border-radius: 10px;
+    color: #fff;
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    background: rgb(38, 0, 255);
+  }
+  .copyright {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .rightSection img {
+    width: 100%;
+  }
+
+  .timeline .heading {
+    margin-bottom: 60px;
+  }
+
+  .left {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .topnav a {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
